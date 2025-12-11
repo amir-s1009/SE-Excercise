@@ -2,7 +2,7 @@ import { KeyValueService } from "../services/keyValue";
 import { TControllerProps } from "../types/types";
 import { response } from "../utils/response";
 
-class KeyValueController {
+export class KeyValueController {
   public static getKeyValueListController({ req, res }: TControllerProps) {
     try {
       const data = KeyValueService.getAllKeyValues();
@@ -38,8 +38,8 @@ class KeyValueController {
 
   public static createKeyValueController({ req, res }: TControllerProps) {
     try {
-      const body = req.body as KeyValue;
-      const data = KeyValueService.createKeyValue(body);
+      const body = req.body as { key: string; value: string };
+      const data = KeyValueService.createKeyValue(body.key, body.value);
       return response(res, {
         code: 201,
         message: "The keyValue has been created.",

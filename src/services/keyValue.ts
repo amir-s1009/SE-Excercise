@@ -10,8 +10,9 @@ export class KeyValueService {
     return keyValue;
   }
 
-  public static createKeyValue(keyValue: KeyValue) {
-    const keyValueCreated = db.create(keyValue);
+  public static createKeyValue(key: string, value: string) {
+    const keyValueInstance = new KeyValue(key, value);
+    const keyValueCreated = db.create(keyValueInstance);
     return keyValueCreated;
   }
 
