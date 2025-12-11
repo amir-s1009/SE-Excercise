@@ -13,7 +13,7 @@ router.get("/getKeyValue/:key", async (req: Request, res: Response) => {
 router.post("/createKeyValue", async (req: Request, res: Response) => {
   await KeyValueController.createKeyValueController({ req, res });
 });
-router.get("/deleteKeyValue/:id", async (req: Request, res: Response) => {
+router.delete("/deleteKeyValue/:key", async (req: Request, res: Response) => {
   await KeyValueController.deleteKeyValueController({ req, res });
 });
 
