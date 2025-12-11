@@ -1,4 +1,6 @@
-class DB {
+import { KeyValue } from "../models/KeyValue";
+
+export class DB {
   constructor() {
     this.memory = [];
   }

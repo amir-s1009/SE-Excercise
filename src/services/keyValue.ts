@@ -1,4 +1,5 @@
 import db from "../DB/DBClient";
+import { KeyValue } from "../models/KeyValue";
 
 export class KeyValueService {
   public static getAllKeyValues() {

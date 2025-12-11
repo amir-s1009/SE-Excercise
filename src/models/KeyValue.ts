@@ -1,4 +1,4 @@
-class KeyValue {
+export class KeyValue {
   constructor(key: string, value: string) {
     this.key = key;
     this.value = value;
