@@ -1,4 +1,3 @@
-import { Role } from "@prisma/client";
 import { Request, Response } from "express";
 
 export type TMeta = {
@@ -17,13 +16,6 @@ export type TResponse<T> = {
 export type TControllerProps = {
   req: Request & { userId?: string };
   res: Response;
-};
-
-export type TJWT = {
-  id: string;
-  phoneNumber: string;
-  email: string;
-  role: Role;
 };
 
 export type TPagination = {
